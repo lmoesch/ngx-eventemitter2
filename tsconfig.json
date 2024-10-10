@@ -11,6 +11,11 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "paths": {
+      "ngx-eventemitter2": [
+        "./dist/ngx-eventemitter2"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
