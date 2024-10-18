@@ -1,11 +1,11 @@
-import { APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, NgModule } from "@angular/core";
+import { APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, ModuleWithProviders, NgModule } from "@angular/core";
 
 import EventEmitter2, { ConstructorOptions } from "eventemitter2";
 import { bootstrapFactory, InitService, initFactory } from "./tmp";
 
 @NgModule({})
 export class NgxEventEmitter2Module {
-  static forRoot(options?: ConstructorOptions) {
+  static forRoot(options?: ConstructorOptions): ModuleWithProviders<NgxEventEmitter2Module> {
     return {
       ngModule: NgxEventEmitter2Module,
       providers: [
@@ -26,7 +26,7 @@ export class NgxEventEmitter2Module {
           useValue: new EventEmitter2(options)
         }
       ],
-      exports: [EventEmitter2]
+      // exports: [EventEmitter2]
     };
   }
 }
