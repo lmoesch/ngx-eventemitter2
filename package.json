@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prepare": "npm run build",
     "build": "ng build ngx-eventemitter2",
     "install": "npm run build",
     "watch": "ng build --watch --configuration development",
